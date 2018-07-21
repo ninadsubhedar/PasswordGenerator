@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PasswordGenerator</string>
+    <string name="upperCaseCharacters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="lowerCaseCharacters">abcdefghijklmnopqrstuvwxyz</string>
+    <string name="digits">0123456789</string>
+    <string name="symbols">!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</string>
 </resources>

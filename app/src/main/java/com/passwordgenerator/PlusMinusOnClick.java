@@ -3,13 +3,15 @@ package com.passwordgenerator;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 
 public class PlusMinusOnClick implements View.OnClickListener {
 
     private TextView txtView;
     private boolean add;
 
-    public PlusMinusOnClick(TextView txtView,boolean add) {
+    PlusMinusOnClick(TextView txtView,boolean add) {
         this.txtView = txtView;
         this.add = add;
     }
@@ -27,7 +29,7 @@ public class PlusMinusOnClick implements View.OnClickListener {
                     cnt--;
                 }
             }
-            txtView.setText(cnt.toString());
+            txtView.setText(String.format(Locale.ENGLISH,"%d",cnt));
         }
         else{
             txtView.setText("0");

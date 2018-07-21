@@ -243,7 +243,8 @@
                 android:hint="Symbols"
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:text="@string/symbols" />
         </LinearLayout>
 
     </LinearLayout>
