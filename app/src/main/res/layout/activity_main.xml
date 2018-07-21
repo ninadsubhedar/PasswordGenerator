@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="15"
             android:ems="10"
+            android:enabled="true"
             android:inputType="number"
             android:text="0"
             android:textAlignment="center"
@@ -77,6 +78,7 @@
             android:layout_weight="15"
             android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:inputType="number"
             android:text="0"
             android:textAlignment="center"
@@ -119,6 +121,7 @@
             android:layout_weight="15"
             android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:inputType="number"
             android:text="0"
             android:textAlignment="center"
@@ -161,6 +164,7 @@
             android:layout_weight="15"
             android:editable="false"
             android:ems="10"
+            android:enabled="false"
             android:inputType="number"
             android:text="0"
             android:textAlignment="center"
@@ -214,6 +218,7 @@
                     android:layout_weight="15"
                     android:editable="false"
                     android:ems="10"
+                    android:enabled="false"
                     android:inputType="number"
                     android:text="0"
                     android:textAlignment="center"
@@ -230,7 +235,7 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/symTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

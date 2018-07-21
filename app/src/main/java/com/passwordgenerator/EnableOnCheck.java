@@ -1,35 +1,34 @@
 package com.passwordgenerator;
 
-import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class EnableOnCheck implements CompoundButton.OnCheckedChangeListener {
 
-    AppCompatActivity context;
+    private View[] viewArr;
 
-    static final Map<Integer,Integer[]> checkBoxMap = new HashMap<Integer,Integer[]>();
-
-    static {
-        checkBoxMap.put(R.id.upCheckBox,new Integer[]{R.id.plusButton1,R.id.minusButton1});
-        checkBoxMap.put(R.id.lowCheckBox,new Integer[]{R.id.plusButton2,R.id.minusButton2});
-        checkBoxMap.put(R.id.digitCheckBox,new Integer[]{R.id.plusButton3,R.id.minusButton3});
-        checkBoxMap.put(R.id.symbolCheckBox,new Integer[]{R.id.plusButton4,R.id.minusButton4});
-
-    }
-    public EnableOnCheck(AppCompatActivity context) {
-        this.context = context;
+    public EnableOnCheck(View[] viewArr) {
+        this.viewArr = viewArr;
     }
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-        Integer[] buttonIds = checkBoxMap.get(compoundButton.getId());
+        for(View v : viewArr){
+            v.setEnabled(b);
+            if(v instanceof TextView && !b && !(v instanceof Button)){
+                if(((TextView) v).getInputType() == InputType.TYPE_CLASS_NUMBER){
+                    ((TextView) v).setText("0");
+                }
+                else{
+                    ((TextView) v).setText("");
+                }
 
-        for(Integer i : buttonIds){
-            context.findViewById(i).setEnabled(b);
+            }
         }
 
     }
