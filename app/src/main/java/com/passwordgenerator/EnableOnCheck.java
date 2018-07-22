@@ -20,14 +20,9 @@ public class EnableOnCheck implements CompoundButton.OnCheckedChangeListener {
 
         for(View v : viewArr){
             v.setEnabled(b);
-            if(v instanceof TextView && !b && !(v instanceof Button)){
-                if(((TextView) v).getInputType() == InputType.TYPE_CLASS_NUMBER){
-                    ((TextView) v).setText("0");
-                }
-                else{
-                    ((TextView) v).setText("");
-                }
 
+            if(v instanceof Button){
+                ((Button)v).performClick();
             }
         }
 
