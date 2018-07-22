@@ -10,9 +10,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class GenPwdOnClick implements View.OnClickListener {
+class GenPwdOnClick implements View.OnClickListener {
 
-    private AppCompatActivity context;
+    private final AppCompatActivity context;
     private static String upChar,lowChar,digits,symbols,charSet,special_char;
     private int pwdLen, minUpper, minLower, minDigits, minSpecial;
 

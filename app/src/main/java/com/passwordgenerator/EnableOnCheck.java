@@ -1,17 +1,15 @@
 package com.passwordgenerator;
 
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.TextView;
 
 
-public class EnableOnCheck implements CompoundButton.OnCheckedChangeListener {
+class EnableOnCheck implements CompoundButton.OnCheckedChangeListener {
 
-    private View[] viewArr;
+    private final View[] viewArr;
 
-    public EnableOnCheck(View[] viewArr) {
+    EnableOnCheck(View[] viewArr) {
         this.viewArr = viewArr;
     }
 
@@ -22,7 +20,7 @@ public class EnableOnCheck implements CompoundButton.OnCheckedChangeListener {
             v.setEnabled(b);
 
             if(v instanceof Button){
-                ((Button)v).performClick();
+                v.performClick();
             }
         }
 

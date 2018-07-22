@@ -6,10 +6,11 @@ import android.widget.TextView;
 import java.util.Locale;
 
 
-public class PlusMinusOnClick implements View.OnClickListener {
+class PlusMinusOnClick implements View.OnClickListener {
 
-    private TextView txtView;
-    private boolean add, isMainLenTxtBox;
+    private final TextView txtView;
+    private final boolean add;
+    private final boolean isMainLenTxtBox;
     private static Integer totalLen;
 
     PlusMinusOnClick(TextView txtView,boolean add,boolean isMainLenTxtBox) {
